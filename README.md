@@ -10,13 +10,13 @@ Welcome to the **Py-Quizz**, a simple yet engaging platform designed to challeng
 
 ## How It Works
 
-#### User Mode
+### User Mode
 1. **Start the Quiz:** Simply enter your name to begin the quiz.
 2. **Answer Questions:** Each question will be presented with four possible choices. Choose the correct one to score points.
 3. **Continue or Quit:** After each question, you have the option to continue with the next question or quit the game.
 4. **View Your Score:** At the end of the quiz, you'll see a summary of your performance, including the number of correct and wrong answers.
 
-#### Admin Mode
+### Admin Mode
 1. **Login:** Access the admin dashboard using the credentials (username: `Aaron`, password: `555`).
 2. **Manage Questions:** Add new questions or remove existing ones to keep the quiz up-to-date.
 3. **Session Management:** Maintain control over the quiz content and ensure that only authorized users can make changes.
