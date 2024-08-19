@@ -32,11 +32,11 @@ Welcome to the **Py-Quizz**, a simple yet engaging platform designed to challeng
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/quiz-application.git
+   git clone https://github.com/a-x-r-o-n/Py-Quizz.git
    ```
 2. **Navigate to the Project Directory:**
    ```bash
-   cd quiz-application
+   cd Py-Quizz
    ```
 3. **Run the Application:**
    ```bash
