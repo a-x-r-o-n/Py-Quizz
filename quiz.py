@@ -1,24 +1,30 @@
 from module import *
+import random
 isNewGame = True
+questionNoAttempted = []
 cont = "y"
+
 name = input("enter your name: ")
 
-question_number = 1
+question_number = random.randint(1,totalNumberOfQuestions)
+
 
 
 while (isNewGame or cont == 'y') and question_number <= totalNumberOfQuestions:
     isNewGame = False
 
+    question_number = random.randint(1,totalNumberOfQuestions)
 
-    result(checkAnswer(loadGame(question_number),question_number))
+
+    if (question_number not in questionNoAttempted) and len(questionNoAttempted)<=totalNumberOfQuestions:
+
+        result(checkAnswer(loadGame(question_number),question_number))
+        
+        cont = input("\n\nwant to continue?\nY or N\n\nenter choice:").lower()
+
+    questionNoAttempted.append(question_number)
+
     
-    cont = input("\n\nwant to continue?\nY or N\n\nenter choice:").lower()
-
-    question_number += 1
-
-    if question_number > totalNumberOfQuestions:
-
-        print("\n\nQuestions not avalable at this moment, Try again after sometime!!\n\n")
 
 
 scoreBoard(name)
