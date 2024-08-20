@@ -1,5 +1,6 @@
 from db import *
 from module import *
+adminLogin = lambda usr,pswd: {print("Logged inn Successfully!!"),True} if usr == adminUsername and pswd == adminPassword else False
 def removeQuestionFromDirectory():
     print("This Module is under Development!\n\n\t\tStay tuned")
 def addNewQuestionsToDirectory():
@@ -52,13 +53,17 @@ def sessionManagement(isAdminLoginVerified):
 
         print("your Session has been created")
         adminSessionStatus = True
-def adminLogin(usr,pswd):
+
+#-------Updated on 20-08-2024-------
+
+'''def adminLogin(usr,pswd):
 
     if usr == adminUsername and pswd == adminPassword:
 
         print(" Logged inn Successfully!!")
 
-        return True
+        return True'''
+
 def adminDashboard():
 
     global adminTask
@@ -79,8 +84,6 @@ def adminDashboard():
 adminSessionStatus = False
 
 sessionManagement(adminLogin(input("ENTER USERNAME: "), input("ENTER PASSWORD: ")))
-
-
 while adminSessionStatus:
 
     processStatus = adminDashboard()

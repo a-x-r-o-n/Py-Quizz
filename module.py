@@ -3,10 +3,10 @@ from db import *
 # ---------- | Methoda | ---------------
 
 def loadGame(qi):
-    global questionsAttempted
+    global totalQuestionsAnswered
 
 
-    questionsAttempted += 1
+    totalQuestionsAnswered += 1
     localCount = 0
 
     for traverse in qNa:
@@ -21,7 +21,6 @@ def loadGame(qi):
             ch = input("\n\nEnter Choice: ")
 
             return ch
-
 
 def checkAnswer(ch,qi):
     localCount = 0
@@ -43,17 +42,14 @@ def result(isCorrect):
     if isCorrect:
 
         correctAnswers += 1
-        print("Correct Answer!!")
-
     elif not isCorrect:
         wrongAnswers += 1
-        print("Wrong Answer!!")
-
-    pass
+    
+    print("Moving on to the next Question....\n\n")
 
 def scoreBoard(name):
 
-    print(f"\n\n---------- | SCORE BOARD | ---------------\n\nName: {name}\nNumber of Questions Attempted: {questionsAttempted}\nNumber of correct Answers: {correctAnswers}\nNumber of Wrong Answers: {wrongAnswers}\n\nAccuracy: {int((correctAnswers/questionsAttempted)*100)}%")
+    print(f"\n\n---------- | SCORE BOARD | ---------------\n\nName: {name}\nNumber of Questions Attempted: {totalQuestionsAnswered}\nNumber of correct Answers: {correctAnswers}\nNumber of Wrong Answers: {wrongAnswers}\n\nAccuracy: {int((correctAnswers/totalQuestionsAnswered)*100)}%")
 
 
 
@@ -73,6 +69,6 @@ def totitms(t):
 
 
 totalNumberOfQuestions = totitms(0)
-questionsAttempted = 0
+totalQuestionsAnswered = 0
 correctAnswers = 0
 wrongAnswers = 0
