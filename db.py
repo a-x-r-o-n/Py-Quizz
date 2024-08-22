@@ -151,5 +151,5 @@ chs = [
 
 
 adminUsername = "Aaron"
-adminPassword = "555"
+adminPassword = "pswd123"
 adminTask = None
