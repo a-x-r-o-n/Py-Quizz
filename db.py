@@ -18,7 +18,17 @@ qNa = {
     "What does JSON stand for?": "d",
     "Which of the following is not a relational database management system?": "b",
     "Which of these is a cloud computing platform?": "c",
-    "What is the full form of OOP?": "a"
+    "What is the full form of OOP?": "a",
+    "Which language is used for Android app development?": "b",
+    "What does 'CSS' stand for?": "d",
+    "Which protocol is used to send emails?": "c",
+    "Which of the following is a markup language?": "a",
+    "What is the default port for HTTP?": "d",
+    "Which of the following is a scripting language?": "c",
+    "What is the main purpose of DNS?": "a",
+    "Which of the following is an example of a search engine?": "b",
+    "What is the file extension for Python files?": "c",
+    "Which of the following is a data structure?": "d"
 }
 
 chs = [
@@ -141,6 +151,66 @@ chs = [
         "B) Object-Oriented Process",
         "C) Object-Oriented Platform",
         "D) Object-Oriented Protocol"
+    ],
+    [
+        "A) Swift",
+        "B) Kotlin",
+        "C) Ruby",
+        "D) JavaScript"
+    ],
+    [
+        "A) Cascading Style System",
+        "B) Computer Style Sheets",
+        "C) Creative Style Sheets",
+        "D) Cascading Style Sheets"
+    ],
+    [
+        "A) FTP",
+        "B) HTTP",
+        "C) SMTP",
+        "D) IMAP"
+    ],
+    [
+        "A) HTML",
+        "B) Python",
+        "C) Java",
+        "D) C++"
+    ],
+    [
+        "A) 21",
+        "B) 22",
+        "C) 8080",
+        "D) 80"
+    ],
+    [
+        "A) C",
+        "B) Java",
+        "C) PHP",
+        "D) C++"
+    ],
+    [
+        "A) Translating domain names to IP addresses",
+        "B) Connecting to databases",
+        "C) Managing email servers",
+        "D) Handling web traffic"
+    ],
+    [
+        "A) Facebook",
+        "B) Google",
+        "C) GitHub",
+        "D) Docker"
+    ],
+    [
+        "A) .html",
+        "B) .css",
+        "C) .py",
+        "D) .js"
+    ],
+    [
+        "A) CPU",
+        "B) GPU",
+        "C) API",
+        "D) Stack"
     ]
 ]
 
