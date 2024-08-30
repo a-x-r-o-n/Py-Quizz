@@ -1,7 +1,23 @@
 from db import *
+import time
+import random
+import datetime
 
 # ---------- | Methoda | ---------------
+def writeFile(logpath,msg):
+    with open(logpath,'a') as file:
+        
+        file.write(msg)
 
+def studentLog(logType,secondParam,thirdParam):
+    if logType == "NEW":
+        writeFile("D:\\scraps\\PY\\P R O J E C T S\\Quiz\\logFiles\\studentProgress.txt",f"|==============================================================================|\n\nStudent Name: {secondParam}\nDate of attempt: {(datetime.datetime.now()).day}/{(datetime.datetime.now()).month}/{(datetime.datetime.now()).year}\nTime: {(datetime.datetime.now()).hour}:{(datetime.datetime.now()).minute}")
+    elif logType == "STATS":
+        writeFile("D:\\scraps\\PY\\P R O J E C T S\\Quiz\\logFiles\\studentProgress.txt",f"\n\nQuestion Number: {secondParam}\nAnswer Status: {thirdParam}")
+
+    elif logType == "FINAL":
+        writeFile("D:\\scraps\\PY\\P R O J E C T S\\Quiz\\logFiles\\studentProgress.txt",f"\n\n__________________\n\nTotal questions attempted: {secondParam}\nTotal Correct Answers: {thirdParam}\nTotal Wrong Answers: {secondParam-thirdParam}\n\n|==============================================================================|")
+    pass
 def loadGame(qi):
     global totalQuestionsAnswered
 
@@ -30,10 +46,11 @@ def checkAnswer(ch,qi):
             ans = qNa[i]
 
     if ch.lower() == ans.lower():
-
+        studentLog("STATS",qi,True)
         return True
 
     else:
+        studentLog("STATS",qi,False)
         return False
 
 def result(isCorrect):
@@ -50,6 +67,7 @@ def result(isCorrect):
 def scoreBoard(name):
 
     print(f"\n\n---------- | SCORE BOARD | ---------------\n\nName: {name}\nNumber of Questions Attempted: {totalQuestionsAnswered}\nNumber of correct Answers: {correctAnswers}\nNumber of Wrong Answers: {wrongAnswers}\n\nAccuracy: {int((correctAnswers/totalQuestionsAnswered)*100)}%")
+    studentLog("FINAL",totalQuestionsAnswered,correctAnswers)
 
 
 

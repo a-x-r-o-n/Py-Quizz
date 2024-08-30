@@ -1,11 +1,14 @@
 from module import *
-startTime = time.time()
+import random
 isNewGame = True
 questionNoAttempted = []
 cont = "y"
+
 name = input("enter your name: ")
-studentLog("NEW",name,None)
-question_number = 0
+
+question_number = random.randint(1,totalNumberOfQuestions)
+
+
 
 while (isNewGame or cont == 'y') and question_number <= totalNumberOfQuestions:
     isNewGame = False
@@ -25,4 +28,3 @@ while (isNewGame or cont == 'y') and question_number <= totalNumberOfQuestions:
 
 
 scoreBoard(name)
-endTime = time.time()
